@@ -15,4 +15,19 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  .button {
+    padding: 1em 2.5em;
+    outline: 0;
+    transition: 200ms ease-in;
+    font-size: 1em;
+    border-radius: .3em;
+    border: 0; 
+  }
+
+  .button:hover {
+    cursor: pointer;
+    background: #333;
+    color: #fff
+  }
 </style>

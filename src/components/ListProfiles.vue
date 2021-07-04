@@ -58,18 +58,22 @@
         <option value="">eg 2</option>
         <option value="">eg 3</option>
       </select>
-
     </div>
-    
+    <!-- PROFILE CARDS -->
+    <ProfileCards />
   </div>
 </template>
 
 <script>
+import ProfileCards from './ProfileCards.vue'
 
 export default {
   name: 'ListProfiles',
   props: {
     msg: String
+  },
+  components: {
+    ProfileCards
   }
 }
 </script>
@@ -93,6 +97,10 @@ export default {
     border-radius: 50%;
     border: .2em solid rgb(219, 219, 219);
   }
+
+
+
+  
 
   .user__action {
     display: flex;

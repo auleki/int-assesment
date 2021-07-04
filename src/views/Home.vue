@@ -26,4 +26,6 @@ export default {
     grid-template-columns: 20% 80%;
     background: rgb(253, 253, 253);
   }
+
+  
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="profile__card">
     <div class="profile__image">
-      <img src="https://www.cheatsheet.com/wp-content/uploads/2021/06/Mary-J.-Blige.jpg" alt="" srcset="">
+      <img src="https://coolmenshair.com/wp-content/uploads/interlocking-dreadlocks-14.jpg" alt="" srcset="">
     </div>
     <div class="profile__info">
       <h3 class="user__information">Mary J Blige, 28</h3>
@@ -25,12 +25,18 @@
 
 <style scoped>
   .profile__card {
-    /* background: transparent; */
-    background: rgb(93, 182, 255);
+    background: rgb(73, 73, 73);
     color: #fff;
     border-radius: .3em;
     height: 100%;
-    width: 20em;
+    width: 100%;
+  }
+
+  .profile__info, 
+  .profile__actions, 
+  .user__information,
+  .profile__locations {
+    margin: .5em 0;
   }
 
   .profile__info {
@@ -59,7 +65,7 @@
 
   .profile__actions {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   
   .profile__image img {

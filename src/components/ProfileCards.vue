@@ -17,6 +17,9 @@ import ProfileCard from './ProfileCard.vue'
     name: 'ProfileCards',
     components: {
       ProfileCard
+    },
+    props: {
+      images: Array
     }
   }
 </script>

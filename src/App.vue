@@ -17,7 +17,7 @@
   }
 
   .button {
-    padding: 1em 2.5em;
+    padding: 1em 2em;
     outline: 0;
     transition: 200ms ease-in;
     font-size: 1em;

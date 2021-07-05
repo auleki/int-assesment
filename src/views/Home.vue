@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Sidebar />
-    <ListProfiles />
+    <ListProfiles @search-photo="fetchQuery"/>
   </div>
 </template>
 
@@ -23,18 +23,28 @@ export default {
       } catch (error) {
         console.log(error)
       }
+    },
+    async fetchQuery () {
+      try {
+        const res = await fetch(`${this.url}/photos?client_id=${this.accessKey}`)
+        const data = await res.json()
+        return data
+      } catch (error) {
+        console.log(error)
+      }
     }
   },
   async created () {
-    const fetchedImages = await this.fetchPictures()
+    const fetchedImages = await this.fetchPictures(`${this.url}/search/photos?client_id=${this.accessKey}`)
     this.images = fetchedImages
     console.log(fetchedImages)
   },
   data () {
     return {
       images: [],
+      query: '',
       accessKey: 'ZbZuYQFCAiv5ajdrojf-hnGAK5hNRpjU0hIlK-fbJcE',
-      url: 'https://api.unsplash.com/photos'
+      url: 'https://api.unsplash.com/'
     }
   },
   components: {
@@ -52,4 +62,5 @@ export default {
     grid-template-columns: 15% 85%;
     background: rgb(248, 248, 248);
   }
+  
 </style>

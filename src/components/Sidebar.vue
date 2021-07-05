@@ -1,6 +1,10 @@
 <template>
   <div class="sidebar">
     <!-- replace with proper link element -->
+    <div class="sidenav__logo">
+      <h1>LOGO</h1>
+    </div>
+    
     <div class="sidebar__links">
       <section class="sidenav__link active">
         <span class="icon">H</span>
@@ -56,12 +60,17 @@
   .sidebar {
     border-right: .2em solid rgb(238, 238, 238);
     padding: 2em 1em 0 1em; 
+    overflow: hidden;
   }
 
   .sidenav__links {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: .5em;
+  }
+
+  .sidenav__logo {
+    margin-bottom: 3em;
   }
 
   .sidenav__link {
@@ -79,7 +88,7 @@
   }
 
   .sidenav__link:not(:last-child) {
-     margin-bottom: 1em;
+     margin-bottom: .5em;
   }
 
   .sidenav__link.active {

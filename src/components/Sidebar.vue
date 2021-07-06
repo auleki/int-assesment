@@ -7,12 +7,14 @@
     
     <div class="sidebar__links">
       <section class="sidenav__link active">
-        <span class="icon">H</span>
-        <span class="link__text">Home</span>    
+        <!-- <span class="icon"><i class="lni lni-home"></i></span> -->
+        <i class="uil uil-home icon"></i>
+        <span class="link__text">Home</span>      
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <!-- <span class="icon">H</span> -->
+        <i class="uil uil-comment-add icon"></i>
         <span class="link__text">Messages</span>    
       </section>
     </div>
@@ -23,32 +25,38 @@
 
     <div class="sidebar__links">
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <!-- <span class="icon">H</span> -->
+        <i class="uil uil-chart icon"></i>
         <span class="link__text">Ranking</span>    
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <i class="uil uil-dollar-alt icon"></i>
         <span class="link__text">Challenge</span>    
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <!-- <span class="icon">H</span> -->
+        <!-- <i class="uil uil-chart"></i> -->
+        <i class="uil uil-megaphone icon"></i>
         <span class="link__text">Party</span>    
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <!-- <span class="icon">H</span> -->
+        <i class="uil uil-link icon"></i>
         <span class="link__text">Connect</span>    
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
-        <span class="link__text">Parade</span>    
+        <!-- <span class="icon">H</span> -->
+        <i class="uil uil-fidget-spinner icon"></i>
+        <span class="link__text">Parade</span>   
       </section>
 
       <section class="sidenav__link">
-        <span class="icon">H</span>
+        <!-- <span class="icon">H</span> -->
+        <i class="uil uil-users-alt icon"></i>
         <span class="link__text">Group</span>    
       </section>
 
@@ -82,9 +90,32 @@
     border: .2em solid transparent;
   }
 
+  .icon {
+    font-size: 1;
+    display: inline-block;
+    transition: 250ms ease-in;
+  }
+
+  .icon:hover {
+    transform: scale(2);
+  }
+
   .sidenav__link:hover {
     cursor: pointer;
     color: black;
+  }
+
+  .link__text, .icon {
+    transition: 200ms ease-out;
+  }
+
+  .sidenav__link:hover > .link__text {
+    transform: translateX(.3em);
+  }
+
+  .sidenav__link:hover > .icon {
+    color: rebeccapurple;
+    transform: scale(1.3);
   }
 
   .sidenav__link:not(:last-child) {
@@ -92,8 +123,19 @@
   }
 
   .sidenav__link.active {
-    color: black;
+    color: #1a1a1a;
     border-color: gainsboro;
+  }
+
+  .sidenav__link.active:hover {
+    /* color: rebeccapurple; */
+    color: #fff;
+    background: rgb(209, 209, 209);
+    border-color: transparent;
+  }
+
+  .sidenav__link.active:hover > .icon {
+    color: #fff;
   }
 
   .sidenav__title {

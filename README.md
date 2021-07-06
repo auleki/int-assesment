@@ -1,4 +1,4 @@
-# fe-assesment
+# FE-assesment
 
 ## Project setup
 ```

@@ -17,7 +17,11 @@ export default {
   methods: {
     async fetchPictures () {
       try {
-        const res = await fetch(`${this.url}?client_id=${this.accessKey}`)
+        const fetchOptions = {
+          method: 'GET',
+          mode: 'no-cors'
+        }
+        const res = await fetch(`${this.url}?client_id=${this.accessKey}`, fetchOptions)
         const data = await res.json()
         return data
       } catch (error) {
@@ -36,14 +40,14 @@ export default {
   },
   async created () {
     const fetchedImages = await this.fetchPictures(`${this.url}/search/photos?client_id=${this.accessKey}`)
-    this.images = fetchedImages
+    // this.images = fetchedImages
     console.log(fetchedImages)
   },
   data () {
     return {
       images: [],
       query: '',
-      accessKey: 'ZbZuYQFCAiv5ajdrojf-hnGAK5hNRpjU0hIlK-fbJcE',
+      accessKey: 'przk7NrHN1OqVYqzQ_VZ1ut5rnGRQAPKRbuiFTRCics',
       url: 'https://api.unsplash.com/'
     }
   },

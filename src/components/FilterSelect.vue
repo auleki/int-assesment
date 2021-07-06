@@ -52,12 +52,28 @@
 </script>
 
 <style scoped>
+  .filters {
+    /* background: rebeccapurple; */
+    justify-content: center;
+    display: flex;
+    border-radius: .3em;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    padding-right: 1em;
+  }
+
   .select__input {
-    padding: 1em 1.5em;
-    outline: 0;
     border: 0;
+    outline: 0;
+    border-right: .1em solid gainsboro;
+    padding: 1.5em;
+    width: 100%;
+    /* color:#fff; */
+    text-align: center;
+    /* background: rgb(65, 65, 65); */
     background: #fff;
   }
+
 
 </style>
 /* <!-- -->  */

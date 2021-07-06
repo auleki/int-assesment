@@ -27,8 +27,9 @@ import ProfileCard from './ProfileCard.vue'
 <style scoped>
   .profile__cards {
     display: grid;
+    padding-right: 1em;
     margin-top: 3em;
     gap: 1em;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 2fr);
   }
 </style>
